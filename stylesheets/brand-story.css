@@ -379,11 +379,10 @@ body {
 
 /* 可以先將所有物件加上邊框，來判斷範圍
     border會佔據距離，outline不會
-*/
-*, *:before, *:after {
-  outline: 1px solid red;
+*,*:before,*:after{
+	outline: 1px solid red;
 }
-
+*/
 .header-area {
   padding-top: 16px;
   padding-bottom: 16px;
@@ -405,7 +404,7 @@ body {
 }
 
 .brand {
-  background-image: url(../img/hero.png);
+  background-image: url("../img/hero.png");
   background-size: cover;
   background-position: center;
 }
