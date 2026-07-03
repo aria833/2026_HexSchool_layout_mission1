@@ -365,4 +365,80 @@ body {
   margin: 0 auto;
   padding: 0px 12px;
   width: 100%;
-}/*# sourceMappingURL=all.css.map */
+}
+
+/* 可以先將所有物件加上邊框，來判斷範圍
+    border會佔據距離，outline不會
+*/
+*, *:before, *:after {
+  outline: 1px solid red;
+}
+
+.header-area {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.header-area-member a {
+  padding: 12px;
+}
+.header-area-member a i {
+  font-size: 24px;
+}
+
+.header-nav-link a {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.main-section {
+  align-items: stretch;
+}
+
+.main-section-input {
+  padding: 120px 80px;
+  background-image: url(../img/login/login-bg.png);
+}
+
+.main-section-info h3 {
+  text-align: center;
+}
+
+.main-section-info-toggle button {
+  width: 50%;
+  padding: 12px 0;
+}
+
+.button-active {
+  border-bottom: 2px solid #212529;
+}
+
+.button-default {
+  border-bottom: 2px solid #DEE2E6;
+  color: #6C757D;
+}
+
+.main-section-method-card {
+  background-color: #FFFFFF;
+  border: 1px solid #DEE2E6;
+  padding: 12px;
+  align-items: center;
+}
+.main-section-method-card i {
+  font-size: 40px;
+}
+
+footer {
+  background-color: #F8F9FA;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.footer-nav-link a {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.footer-copyright {
+  color: #6C757D;
+  padding-top: 32px;
+  text-align: center;
+}/*# sourceMappingURL=login.css.map */

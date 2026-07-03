@@ -30,9 +30,66 @@
 }
 
 
+//hero區域
+
+.hero {
+    background-image: url(../img/index/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    max-width: 100%;
+    background-position: center;
+}
+
+.hero-content {
+    padding: 288px 200px;
+    color: $neutral0;
+
+}
+
+
+.button-buy {
+    color: $neutral900;
+    background-color: $primary300;
+    padding: 12px 24px;
+}
+
+//main區域 
+main {
+    padding: 64px 0;
+}
 
 
 
+.main-content-card {
+    max-width: 636px;
+}
+
+.hot {
+    padding: 64px 0;
+}
+
+.hot-content-card {
+    max-width: 306px;
+}
+
+
+//coupon區域
+section {
+    background-color: $primary200;
+}
+
+.coupon {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-top: 48px;
+
+    button {
+        color: $neutral0;
+        background-color: $neutral900;
+        padding: 12px 24px;
+    }
+}
 
 
 //footer區域

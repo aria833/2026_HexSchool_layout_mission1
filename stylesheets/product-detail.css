@@ -109,6 +109,12 @@ button {
   width: calc((100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count));
 }
 
+.col-6 {
+  --span: 6;
+  --gap-count: calc(var(--span) - 1);
+  width: calc((100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count));
+}
+
 .col-7 {
   --span: 7;
   --gap-count: calc(var(--span) - 1);
@@ -265,6 +271,10 @@ button {
   margin-bottom: 32px;
 }
 
+.padding-bottom-xl {
+  padding-bottom: 32px;
+}
+
 .spacing-2xl {
   gap: 40px;
 }
@@ -295,6 +305,10 @@ button {
 
 .spacing-6xl {
   gap: 80px;
+}
+
+.radius-xs {
+  border-radius: 2px;
 }
 
 .radius-sm {
@@ -331,6 +345,11 @@ button {
 
 .align-center {
   align-items: center;
+}
+
+/* 把右邊多餘的空間往左排 */
+.ml-auto {
+  margin-left: auto;
 }
 
 body {

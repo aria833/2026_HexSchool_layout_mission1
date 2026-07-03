@@ -1,0 +1,115 @@
+@import 'reset';
+
+@import 'variable';
+@import 'layout';
+@import 'base';
+@import 'main';
+
+
+/* 可以先將所有物件加上邊框，來判斷範圍
+    border會佔據距離，outline不會
+*/
+*,*:before,*:after{
+	outline: 1px solid red;
+}
+
+
+//header 區域
+.header-area {
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    &-member {
+        a {
+            padding: 12px;
+
+            i {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.header-nav-link {
+    a {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+}
+
+
+
+//圖片區域
+.main-section {
+    align-items: stretch;
+}
+
+
+//註冊登入區塊
+
+.main-section-input {
+    padding: 120px 80px;
+    background-image: url(../img/login/login-bg.png);
+}
+
+.main-section-info {
+    h3 {
+        text-align: center;
+    }
+}
+
+
+.main-section-info-toggle {
+    button {
+        width: 50%;
+        padding: 12px 0;
+    }
+}
+
+.button-active {
+    border-bottom: 2px solid $neutral900;
+}
+
+.button-default {
+    border-bottom: 2px solid $neutral300;
+    color: $neutral600;
+}
+
+.main-section-method-card {
+    background-color: $neutral0;
+    border: 1px solid $neutral300;
+    padding: 12px;
+    align-items: center;
+
+    i {
+        font-size: 40px;
+    }
+}
+
+
+
+
+
+
+//footer區域
+footer {
+    background-color: $neutral100;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.footer {
+    &-nav {
+        &-link {
+            a {
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
+        }
+    }
+    &-copyright {
+        color: $neutral600;
+        padding-top: 32px;
+        text-align: center;
+    }
+}
