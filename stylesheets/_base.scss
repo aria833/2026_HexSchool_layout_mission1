@@ -90,6 +90,15 @@ button {
     );
 }
 
+.col-8 {
+    --span: 8;
+    --gap-count: calc(var(--span) - 1);
+    width: calc(
+        (100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count)
+    );
+}
+
+
 .col-10 {
     --span: 10;
     --gap-count: calc(var(--span) - 1);
@@ -331,4 +340,8 @@ button {
 /* 把右邊多餘的空間往左排 */
 .ml-auto{
     margin-left: auto;
+}
+
+.m0-auto {
+    margin: 0 auto;
 }

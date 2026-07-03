@@ -7,31 +7,54 @@
 
 /* 可以先將所有物件加上邊框，來判斷範圍
     border會佔據距離，outline不會
-
+*/
 *,*:before,*:after{
 	outline: 1px solid red;
 }
 */
 
-//header區域
-header {
-    background-image: url(../img/hero.png);
-    background-size: cover;
-    background-position: center;
+
+//header 區域
+.header-area {
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    &-member {
+        a {
+            padding: 12px;
+
+            i {
+                font-size: 24px;
+            }
+        }
+    }
 }
 
-.header {
-    &-title {
-        color: $neutral0;
-        padding-top: 151px;
-        padding-bottom: 151px;
-        text-align: center;
+.header-nav-link {
+    a {
+        padding-top: 12px;
+        padding-bottom: 12px;
     }
 }
 
 .headings-h5 {
     color: $primary400;
 }
+
+
+//品牌故事區域
+.brand {
+    background-image: url(../img/hero.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.brand-title {
+        color: $neutral0;
+        padding: 151px 0;
+        text-align: center;
+}
+
 
 
 //slogan區域
@@ -85,15 +108,43 @@ header {
     }
 }
 
+//coupon區域
+section {
+    background-color: $primary200;
+}
+
+.coupon {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-top: 48px;
+
+    button {
+        color: $neutral0;
+        background-color: $neutral900;
+        padding: 12px 24px;
+    }
+}
+
+
 //footer區域
 footer {
     background-color: $neutral100;
-    color: $neutral600;
-    text-align: center;
+    padding: 64px 0;
+}
 
-    .footer-copyright {
-        padding-top: 64px;
-        padding-bottom: 64px;
+.footer {
+    &-nav {
+        &-link {
+            a {
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
+        }
+    }
+    &-copyright {
+        color: $neutral600;
+        padding-top: 32px;
+        text-align: center;
     }
 }
 

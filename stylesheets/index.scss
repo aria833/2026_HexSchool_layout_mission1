@@ -6,6 +6,15 @@
 @import 'main';
 
 
+/* 可以先將所有物件加上邊框，來判斷範圍
+    border會佔據距離，outline不會
+*/
+*,*:before,*:after{
+	outline: 1px solid red;
+}
+
+
+
 //header 區域
 .header-area {
     padding-top: 16px;
@@ -54,6 +63,7 @@
     padding: 12px 24px;
 }
 
+
 //main區域 
 main {
     padding: 64px 0;
@@ -72,6 +82,69 @@ main {
 .hot-content-card {
     max-width: 306px;
 }
+
+//聯名區域
+.collaboration {
+    background-image: url(../img/index/banner-co-branded.png);
+    background-size: cover;
+    background-position: center;
+    margin: 48px 0;
+}
+
+.collaboration-content {
+    padding-top: 100px;
+    padding-bottom: 8px;
+    color: $neutral0;
+    text-align: center;
+
+}
+
+.collaboration-content-campaign-word-title-main-kevin {
+    h1 {
+        color: $primary300;
+    }
+}
+
+.collaboration-content-campaign {
+    margin-bottom: 84px;
+}
+
+.color-n500 {
+    color: $neutral500;
+}
+
+.collaboration-content-rotation {
+    color: $neutral400;
+}
+
+//series區域
+
+.series-content {
+    margin: 64px 0;
+}
+
+.series-card-item {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url(../img/product-list/product-1.png);
+    background-size: cover;
+    background-position: center;
+    max-width: 306px;
+    color: $neutral0;
+
+}
+
+
+
+.series-card-content {
+    padding: 118px 0;
+}
+
+//靈感區域
+.inspiration-content {
+    margin: 64px 0;
+}
+
 
 
 //coupon區域

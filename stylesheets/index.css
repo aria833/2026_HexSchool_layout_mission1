@@ -121,6 +121,12 @@ button {
   width: calc((100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count));
 }
 
+.col-8 {
+  --span: 8;
+  --gap-count: calc(var(--span) - 1);
+  width: calc((100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count));
+}
+
 .col-10 {
   --span: 10;
   --gap-count: calc(var(--span) - 1);
@@ -352,6 +358,10 @@ button {
   margin-left: auto;
 }
 
+.m0-auto {
+  margin: 0 auto;
+}
+
 body {
   letter-spacing: 0.05em;
   font-family: "Noto Sans TC", sans-serif;
@@ -365,6 +375,13 @@ body {
   margin: 0 auto;
   padding: 0px 12px;
   width: 100%;
+}
+
+/* 可以先將所有物件加上邊框，來判斷範圍
+    border會佔據距離，outline不會
+*/
+*, *:before, *:after {
+  outline: 1px solid red;
 }
 
 .header-area {
@@ -417,6 +434,56 @@ main {
 
 .hot-content-card {
   max-width: 306px;
+}
+
+.collaboration {
+  background-image: url(../img/index/banner-co-branded.png);
+  background-size: cover;
+  background-position: center;
+  margin: 48px 0;
+}
+
+.collaboration-content {
+  padding-top: 100px;
+  padding-bottom: 8px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.collaboration-content-campaign-word-title-main-kevin h1 {
+  color: #C0FA73;
+}
+
+.collaboration-content-campaign {
+  margin-bottom: 84px;
+}
+
+.color-n500 {
+  color: #ADB5BD;
+}
+
+.collaboration-content-rotation {
+  color: #CED4DA;
+}
+
+.series-content {
+  margin: 64px 0;
+}
+
+.series-card-item {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/product-list/product-1.png);
+  background-size: cover;
+  background-position: center;
+  max-width: 306px;
+  color: #FFFFFF;
+}
+
+.series-card-content {
+  padding: 118px 0;
+}
+
+.inspiration-content {
+  margin: 64px 0;
 }
 
 section {

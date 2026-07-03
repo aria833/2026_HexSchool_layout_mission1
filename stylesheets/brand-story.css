@@ -121,6 +121,12 @@ button {
   width: calc((100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count));
 }
 
+.col-8 {
+  --span: 8;
+  --gap-count: calc(var(--span) - 1);
+  width: calc((100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count));
+}
+
 .col-10 {
   --span: 10;
   --gap-count: calc(var(--span) - 1);
@@ -352,6 +358,10 @@ button {
   margin-left: auto;
 }
 
+.m0-auto {
+  margin: 0 auto;
+}
+
 body {
   letter-spacing: 0.05em;
   font-family: "Noto Sans TC", sans-serif;
@@ -369,26 +379,41 @@ body {
 
 /* 可以先將所有物件加上邊框，來判斷範圍
     border會佔據距離，outline不會
-
-*,*:before,*:after{
-	outline: 1px solid red;
-}
 */
-header {
+*, *:before, *:after {
+  outline: 1px solid red;
+}
+
+.header-area {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.header-area-member a {
+  padding: 12px;
+}
+.header-area-member a i {
+  font-size: 24px;
+}
+
+.header-nav-link a {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.headings-h5 {
+  color: #57A203;
+}
+
+.brand {
   background-image: url(../img/hero.png);
   background-size: cover;
   background-position: center;
 }
 
-.header-title {
+.brand-title {
   color: #FFFFFF;
-  padding-top: 151px;
-  padding-bottom: 151px;
+  padding: 151px 0;
   text-align: center;
-}
-
-.headings-h5 {
-  color: #57A203;
 }
 
 .slogan {
@@ -427,12 +452,32 @@ header {
   padding-bottom: 8px;
 }
 
+section {
+  background-color: #E8FEC5;
+}
+
+.coupon {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-top: 48px;
+}
+.coupon button {
+  color: #FFFFFF;
+  background-color: #212529;
+  padding: 12px 24px;
+}
+
 footer {
   background-color: #F8F9FA;
-  color: #6C757D;
-  text-align: center;
+  padding: 64px 0;
 }
-footer .footer-copyright {
-  padding-top: 64px;
-  padding-bottom: 64px;
+
+.footer-nav-link a {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.footer-copyright {
+  color: #6C757D;
+  padding-top: 32px;
+  text-align: center;
 }/*# sourceMappingURL=brand-story.css.map */
