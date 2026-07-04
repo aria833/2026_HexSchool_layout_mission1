@@ -17,8 +17,7 @@
 
 //header 區域
 .header-area {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding: 16px 0;
 
     &-member {
         a {
@@ -28,19 +27,24 @@
                 font-size: 24px;
             }
         }
+
+        a:hover {
+            color: $primary400;
+        }   
     }
-}
+}   
 
 .header-nav-link {
     a {
-        padding-top: 12px;
-        padding-bottom: 12px;
+        padding: 12px 0;
     }
+    a:hover {
+        color: $primary400;
+    }  
 }
 
 
 //hero區域
-
 .hero {
     background-image: url(../img/index/banner.png);
     background-repeat: no-repeat;
@@ -123,6 +127,11 @@ main {
     margin: 64px 0;
 }
 
+.series-card-content {
+    padding-top: 118px;
+    padding-bottom: 118px;
+}
+
 .series-card-item {
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
@@ -136,9 +145,7 @@ main {
 
 
 
-.series-card-content {
-    padding: 118px 0;
-}
+
 
 //靈感區域
 .inspiration-content {
@@ -148,36 +155,48 @@ main {
 
 
 //coupon區域
-section {
-    background-color: $primary200;
-}
-
 .coupon {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    margin-top: 48px;
+    background-color: $primary200;
+    
+    &-content {
+        padding: 24px 0;
+        margin-top: 48px;
 
-    button {
-        color: $neutral0;
-        background-color: $neutral900;
-        padding: 12px 24px;
+        @media (width: 375px) {
+            margin-top: 24px;
+        }
+
+        a {
+            color: $neutral0;
+            background-color: $neutral900;
+            padding: 12px 24px;
+
+            @media (width: 375px) {
+                padding: 8px 16px;
+            }
+        }
     }
 }
-
 
 //footer區域
 footer {
     background-color: $neutral100;
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding: 64px 0;
+
+    @media (width:375px) {
+        padding: 32px 0;
+    }
 }
 
 .footer {
     &-nav {
         &-link {
             a {
-                padding-top: 12px;
-                padding-bottom: 12px;
+                padding: 12px 0;
+            }
+
+            a:hover {
+                color: $primary400;
             }
         }
     }
@@ -185,5 +204,6 @@ footer {
         color: $neutral600;
         padding-top: 32px;
         text-align: center;
+        border-top: 1px solid $neutral300;
     }
 }

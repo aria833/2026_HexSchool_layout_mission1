@@ -26,13 +26,19 @@
                 font-size: 24px;
             }
         }
+        a:hover {
+            color: $primary400;
+        }
     }
 }
 
+
 .header-nav-link {
     a {
-        padding-top: 12px;
-        padding-bottom: 12px;
+        padding-top: 12px 0;
+    }
+    a:hover {
+        color: $primary400;
     }
 }
 
@@ -40,9 +46,10 @@
 .main-breadcrumb {
     margin-top: 32px;
     margin-bottom: 24px;
+    color: $neutral600;
 
-    a:first-child {
-        color: $neutral600;
+    a:last-child {
+        color: $neutral900;
     }
 
     span {
@@ -55,6 +62,10 @@
 }
 
 .select-color {
+    color: $primary400;
+}
+
+.hover-color:hover {
     color: $primary400;
 }
 
@@ -83,17 +94,22 @@
             li {
                 width: calc((100% - 48px) / 3);
             }
+
+             @media (width: 375px) {
+                ul {
+                    row-gap: 24px; // 確保換行後的間距
+                    column-gap: 12px; // 左右卡片的間距
+                }
+                li {
+                    width: calc((100% - 24px) / 2);
+                }
+            }   
         }
-        //頁碼區域
-    &-page {
-        a {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
+
+       
+
+
+
         //頁碼區域
         &-page {
             a {
@@ -103,8 +119,30 @@
                 justify-content: center;
                 align-items: center;
             }
+
+            &-number {
+                a:hover {
+                    background-color: $neutral100;
+                }
+                a:active {
+                    background-color: $primary300;
+                }
+            }
         }
+        
     }
+}
+
+.number-selected {
+    background-color: $primary300;
+}
+
+.page:hover {
+    background-color: $neutral100;
+}
+
+.page:active {
+    background-color: $neutral300;
 }
 
 
@@ -124,35 +162,48 @@
 
 
 //coupon區域
-section {
-    background-color: $primary200;
-}
-
 .coupon {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    margin-top: 48px;
+    background-color: $primary200;
+    
+    &-content {
+        padding: 24px 0;
+        margin-top: 48px;
 
-    button {
-        color: $neutral0;
-        background-color: $neutral900;
-        padding: 12px 24px;
+        @media (width: 375px) {
+            margin-top: 24px;
+        }
+
+        a {
+            color: $neutral0;
+            background-color: $neutral900;
+            padding: 12px 24px;
+
+            @media (width: 375px) {
+                padding: 8px 16px;
+            }
+        }
     }
 }
 
 //footer區域
 footer {
     background-color: $neutral100;
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding: 64px 0;
+
+    @media (width:375px) {
+        padding: 32px 0;
+    }
 }
 
 .footer {
     &-nav {
         &-link {
             a {
-                padding-top: 12px;
-                padding-bottom: 12px;
+                padding: 12px 0;
+            }
+
+            a:hover {
+                color: $primary400;
             }
         }
     }
@@ -160,5 +211,6 @@ footer {
         color: $neutral600;
         padding-top: 32px;
         text-align: center;
+        border-top: 1px solid $neutral300;
     }
 }

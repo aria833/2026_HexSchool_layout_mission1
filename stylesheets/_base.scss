@@ -183,6 +183,8 @@ button {
     font-weight: $font-weight-medium;
 }
 
+
+
 // paragraph
 .paragraph-lg {
     font-size: map-get($font-sizes, 'paragraph-lg');
@@ -344,4 +346,90 @@ button {
 
 .m0-auto {
     margin: 0 auto;
+}
+
+@media (max-width: 375px) {
+    .label-mb-sm {
+    font-size: map-get($font-sizes, 'label-sm');
+    line-height: 1.5;
+    font-weight: $font-weight-medium;
+    }
+
+    .label-mb-md {
+        font-size: map-get($font-sizes, 'label-md');
+        line-height: 1.5;
+        font-weight: $font-weight-medium;
+    }
+
+    .headings-mb-h4 {
+        font-size: map-get($font-sizes, 'h4');
+        line-height: 1.2;
+        font-weight: $font-weight-bold;
+    }
+
+    .headings-mb-h5 {
+        font-size: map-get($font-sizes, 'h5');
+        line-height: 1.2;
+        font-weight: $font-weight-bold;
+    }
+
+    .headings-mb-h6 {
+        font-size: map-get($font-sizes, 'h6');
+        line-height: 1.2;
+        font-weight: $font-weight-bold;
+    }
+
+
+    //間隔
+    .spacing-mb-xxs {
+        gap: 4px;
+    }
+
+    .spacing-mb-xs {
+    gap: 8px;
+    }
+
+    .spacing-mb-m {
+    gap: 16px;
+    }
+
+    .px-mb-12 {
+        padding: 0px 12px;
+    }
+
+    /* 在md以下，原本隱藏的要打開 */
+    .d-md-block{
+        display: block;
+    }
+    /* 在md以下，原本打開的要隱藏 */
+    .d-md-none {
+        display: none;
+    }
+    .d-md-column {
+        flex-direction: column;
+    }
+
+    .align-mb-start {
+        align-items: start;
+    }
+
+    .align-mb-center {
+        align-items: center;
+    }
+
+    .w-md-full {
+        width: 100%;
+        height: auto;
+    }
+
+   
+
+
+    .col-md-12 {
+    --span: 12;
+    --gap-count: calc(var(--span) - 1);
+    width: calc(
+        (100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count)
+    );
+    }
 }

@@ -16,8 +16,7 @@
 
 //header 區域
 .header-area {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding: 16px 0;
 
     &-member {
         a {
@@ -27,14 +26,20 @@
                 font-size: 24px;
             }
         }
+
+        a:hover {
+            color: $primary400;
+        }   
     }
-}
+}   
 
 .header-nav-link {
     a {
-        padding-top: 12px;
-        padding-bottom: 12px;
+        padding: 12px 0;
     }
+    a:hover {
+        color: $primary400;
+    }  
 }
 
 
@@ -99,19 +104,15 @@ main {
 
 
 
-//footer區域
-footer {
-    background-color: $neutral100;
-    padding-top: 64px;
-    padding-bottom: 64px;
-}
-
 .footer {
     &-nav {
         &-link {
             a {
-                padding-top: 12px;
-                padding-bottom: 12px;
+                padding: 12px 0;
+            }
+
+            a:hover {
+                color: $primary400;
             }
         }
     }
@@ -119,5 +120,6 @@ footer {
         color: $neutral600;
         padding-top: 32px;
         text-align: center;
+        border-top: 1px solid $neutral300;
     }
 }
