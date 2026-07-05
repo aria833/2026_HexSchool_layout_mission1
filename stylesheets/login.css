@@ -587,11 +587,10 @@ footer {
 
 /* 可以先將所有物件加上邊框，來判斷範圍
     border會佔據距離，outline不會
-*/
-*, *:before, *:after {
-  outline: 1px solid red;
+*,*:before,*:after{
+	outline: 1px solid red;
 }
-
+*/
 .main-section-input {
   background-image: url(../img/login/login-bg.png);
   background-size: cover;
@@ -636,6 +635,10 @@ footer {
   color: #6C757D;
 }
 
+.button-default:hover {
+  background-color: #DEE2E6;
+}
+
 .main-section-method-card {
   background-color: #FFFFFF;
   border: 1px solid #DEE2E6;
@@ -644,4 +647,12 @@ footer {
 }
 .main-section-method-card i {
   font-size: 40px;
+}
+
+.main-section-method-card:hover {
+  background-color: #F5FEE7;
+}
+
+.main-section-method-card:active {
+  background-color: #E8FEC5;
 }/*# sourceMappingURL=login.css.map */

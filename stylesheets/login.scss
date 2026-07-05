@@ -8,13 +8,10 @@
 
 /* 可以先將所有物件加上邊框，來判斷範圍
     border會佔據距離，outline不會
-*/
 *,*:before,*:after{
 	outline: 1px solid red;
 }
-
-
-
+*/
 
 //註冊登入區塊
 .main-section-input {
@@ -27,7 +24,6 @@
         background-image: none;
     }    
 }
-
 
 .main-section-input-content {
     padding: 120px 80px;
@@ -67,6 +63,10 @@
     color: $neutral600;
 }
 
+.button-default:hover {
+    background-color: $neutral300;
+    }
+
 .main-section-method-card {
     background-color: $neutral0;
     border: 1px solid $neutral300;
@@ -78,4 +78,10 @@
     }
 }
 
+.main-section-method-card:hover {
+    background-color: $primary100;
+}
 
+.main-section-method-card:active {
+    background-color: $primary200;
+}
