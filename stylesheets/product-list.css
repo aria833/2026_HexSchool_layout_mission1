@@ -426,6 +426,9 @@ button {
   .spacing-mb-l {
     gap: 24px;
   }
+  .margin-bottom-mb-l {
+    margin-bottom: 24px;
+  }
   .margin-bottom-mb-xl {
     margin-bottom: 32px;
   }

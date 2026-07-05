@@ -1,0 +1,627 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 全域都套用border-box
+    包含了padding和border的區域
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* 清除圖片底部預設的空隙：img預設為inline元素，會依照文字基線（baseline）進行垂直對齊，因此會在底部保留約3~5px的空間，用來容納文字的descender 
+    處理方式1：display:block
+        將圖片改為區塊元素，直接避免 inline 元素的基線空隙問題
+    處理方式2：vertical-align: middle
+        保留 inline 特性，調整圖片與文字基線的對齊方式
+設定img為流動圖片，避免破版*/
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+}
+
+:root {
+  --column: 12; /* 拆分成12格網格系統 */
+  --gutter: 24px; /* gutter配置24px */
+}
+
+.col-2 {
+  --span: 2;
+  --gap-count: calc(var(--span) - 1);
+  width: calc((100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count));
+}
+
+.col-3 {
+  --span: 3;
+  --gap-count: calc(var(--span) - 1);
+  width: calc((100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count));
+}
+
+.col-5 {
+  --span: 5;
+  --gap-count: calc(var(--span) - 1);
+  width: calc((100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count));
+}
+
+.col-6 {
+  --span: 6;
+  --gap-count: calc(var(--span) - 1);
+  width: calc((100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count));
+}
+
+.col-7 {
+  --span: 7;
+  --gap-count: calc(var(--span) - 1);
+  width: calc((100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count));
+}
+
+.col-8 {
+  --span: 8;
+  --gap-count: calc(var(--span) - 1);
+  width: calc((100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count));
+}
+
+.col-10 {
+  --span: 10;
+  --gap-count: calc(var(--span) - 1);
+  width: calc((100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count));
+}
+
+.display1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.display2 {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.headings-h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.headings-h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.headings-h3 {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.headings-h4 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.headings-h5 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.headings-h6 {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.label-lg {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.label-md {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.label-sm {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.label-xs {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.paragraph-lg {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.paragraph-md {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.paragraph-sm {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.paragraph-xs {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.spacing-xxs {
+  gap: 4px;
+}
+
+.margin-bottom-xxs {
+  margin-bottom: 4px;
+}
+
+.spacing-xs {
+  gap: 8px;
+}
+
+.margin-bottom-xs {
+  margin-bottom: 8px;
+}
+
+.spacing-s {
+  gap: 12px;
+}
+
+.margin-bottom-s {
+  margin-bottom: 12px;
+}
+
+.spacing-m {
+  gap: 16px;
+}
+
+.margin-bottom-m {
+  margin-bottom: 16px;
+}
+
+.spacing-l {
+  gap: 24px;
+}
+
+.margin-bottom-l {
+  margin-bottom: 24px;
+}
+
+.spacing-xl {
+  gap: 32px;
+}
+
+.margin-bottom-xl {
+  margin-bottom: 32px;
+}
+
+.padding-bottom-xl {
+  padding-bottom: 32px;
+}
+
+.spacing-2xl {
+  gap: 40px;
+}
+
+.spacing-3xl {
+  gap: 48px;
+}
+
+.margin-bottom-3xl {
+  margin-bottom: 48px;
+}
+
+.padding-bottom-3xl {
+  padding-bottom: 48px;
+}
+
+.spacing-4xl {
+  gap: 56px;
+}
+
+.spacing-5xl {
+  gap: 64px;
+}
+
+.margin-bottom-5xl {
+  margin-bottom: 64px;
+}
+
+.spacing-6xl {
+  gap: 80px;
+}
+
+.radius-xs {
+  border-radius: 2px;
+}
+
+.radius-sm {
+  border-radius: 4px;
+}
+
+.radius-md {
+  border-radius: 12px;
+}
+
+.radius-rounded {
+  border-radius: 1000px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+/* 把右邊多餘的空間往左排 */
+.ml-auto {
+  margin-left: auto;
+}
+
+.m0-auto {
+  margin: 0 auto;
+}
+
+.d-none {
+  display: none;
+}
+
+@media (max-width: 543px) {
+  .label-mb-sm {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+  .label-mb-md {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+  .headings-mb-h3 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  .headings-mb-h4 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  .headings-mb-h5 {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  .headings-mb-h6 {
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  .paragraph-mb-sm {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+  .spacing-mb-0 {
+    gap: 0px;
+  }
+  .spacing-mb-xxs {
+    gap: 4px;
+  }
+  .spacing-mb-xs {
+    gap: 8px;
+  }
+  .margin-bottom-mb-xs {
+    margin-bottom: 8px;
+  }
+  .margin-bottom-mb-s {
+    margin-bottom: 12px;
+  }
+  .spacing-mb-m {
+    gap: 16px;
+  }
+  .margin-bottom-mb-m {
+    margin-bottom: 16px;
+  }
+  .spacing-mb-l {
+    gap: 24px;
+  }
+  .margin-bottom-mb-l {
+    margin-bottom: 24px;
+  }
+  .margin-bottom-mb-xl {
+    margin-bottom: 32px;
+  }
+  .px-mb-12 {
+    padding: 0px 12px;
+  }
+  /* 在md以下，原本隱藏的要打開 */
+  .d-mb-block {
+    display: block;
+  }
+  /* 在md以下，原本打開的要隱藏 */
+  .d-mb-none {
+    display: none;
+  }
+  .d-mb-column {
+    flex-direction: column;
+  }
+  .d-mb-flex {
+    display: flex;
+  }
+  .flex-mb-nowrap {
+    flex-wrap: nowrap;
+  }
+  .align-mb-start {
+    align-items: start;
+  }
+  .align-mb-center {
+    align-items: center;
+  }
+  .text-mb-start {
+    text-align: start;
+  }
+  .w-md-full {
+    width: 100%;
+    height: auto;
+  }
+  .col-mb-12 {
+    --span: 12;
+    --gap-count: calc(var(--span) - 1);
+    width: calc((100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count));
+  }
+}
+body {
+  letter-spacing: 0.05em;
+  font-family: "Noto Sans TC", sans-serif;
+  color: #212529;
+  margin: 0 auto;
+}
+
+/* 避免畫面縮小時貼其邊界，左右保留12px留白，並將最大寬度設為1296+24= 1320*/
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0px 12px;
+  width: 100%;
+}
+
+/* 可以先將所有物件加上邊框，來判斷範圍
+    border會佔據距離，outline不會
+*,*:before,*:after{
+	outline: 1px solid red;
+}
+*/
+.header-area {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.header-area-member a {
+  padding: 12px;
+}
+.header-area-member a i {
+  font-size: 24px;
+}
+.header-area-member a:hover {
+  color: #57A203;
+}
+
+.header-nav-link a {
+  padding: 12px 0;
+}
+.header-nav-link a:hover {
+  color: #57A203;
+}
+
+.headings-h5 {
+  color: #57A203;
+}
+
+.brand {
+  background-image: url("../img/hero.png");
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 543px) {
+  .brand {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/hero-sm.png");
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.brand-title {
+  color: #FFFFFF;
+  padding: 151px 0;
+  text-align: center;
+}
+
+.slogan {
+  text-align: center;
+  padding: 32px;
+  background-color: #F5FEE7;
+}
+@media (max-width: 543px) {
+  .slogan {
+    padding: 24px;
+  }
+}
+
+.bottom-line {
+  border-bottom: 1px solid #DEE2E6;
+}
+
+.history-event ol li span:first-child {
+  padding-right: 8px;
+  border-right: 1px solid #212529;
+}
+.history-event ol li span:last-child {
+  padding-left: 8px;
+}
+
+.history-event ol {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.concept-list-border {
+  border-left: 3px solid #DEE2E6;
+  text-indent: 12px;
+}
+
+.story-content {
+  color: #57A203;
+}
+.story-content-link {
+  border-bottom: 1px solid #57A203;
+  margin-left: 4px;
+}
+.story-content ul li a {
+  padding: 8px 0;
+}
+
+.coupon {
+  background-color: #E8FEC5;
+}
+.coupon-content {
+  padding: 24px 0;
+  margin-top: 48px;
+}
+@media (max-width: 576px) {
+  .coupon-content {
+    margin-top: 24px;
+  }
+}
+.coupon-content a {
+  color: #FFFFFF;
+  background-color: #212529;
+  padding: 12px 24px;
+}
+@media (max-width: 576px) {
+  .coupon-content a {
+    padding: 8px 16px;
+  }
+}
+
+footer {
+  background-color: #F8F9FA;
+  padding: 64px 0;
+}
+@media (max-width: 576px) {
+  footer {
+    padding: 32px 0;
+  }
+}
+
+.footer-nav-link a {
+  padding: 12px 0;
+}
+.footer-nav-link a:hover {
+  color: #57A203;
+}
+.footer-copyright {
+  color: #6C757D;
+  padding-top: 32px;
+  text-align: center;
+  border-top: 1px solid #DEE2E6;
+}/*# sourceMappingURL=brand-story.css.map */

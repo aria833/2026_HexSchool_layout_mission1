@@ -45,11 +45,25 @@
 
 //註冊登入區塊
 .main-section-input {
-     background-image: url(../img/login/login-bg.png);
+    background-image: url(../img/login/login-bg.png);
+    background-size: cover;
+    background-position: center;
+    flex-grow: 1;
+
+    @media (max-width: 576px) {
+        background-image: none;
+    }    
 }
+
 
 .main-section-input-content {
     padding: 120px 80px;
+    border-radius: 16px;
+    height: 100%;
+
+    @media (max-width: 576px) {
+        padding: 32px 0;
+    }
 }
 
 .main-section-info {
@@ -60,10 +74,15 @@
 
 
 .main-section-info-toggle {
-    button {
-        width: 50%;
-        padding: 12px 0;
+    li {
+        flex: 1;
     }
+    
+    a {
+        padding: 12px 0;
+        text-align: center;
+    }
+
 }
 
 .button-active {

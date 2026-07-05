@@ -426,6 +426,9 @@ button {
   .spacing-mb-l {
     gap: 24px;
   }
+  .margin-bottom-mb-l {
+    margin-bottom: 24px;
+  }
   .margin-bottom-mb-xl {
     margin-bottom: 32px;
   }
@@ -512,19 +515,37 @@ body {
 
 .main-section-input {
   background-image: url(../img/login/login-bg.png);
+  background-size: cover;
+  background-position: center;
+  flex-grow: 1;
+}
+@media (max-width: 576px) {
+  .main-section-input {
+    background-image: none;
+  }
 }
 
 .main-section-input-content {
   padding: 120px 80px;
+  border-radius: 16px;
+  height: 100%;
+}
+@media (max-width: 576px) {
+  .main-section-input-content {
+    padding: 32px 0;
+  }
 }
 
 .main-section-info h3 {
   text-align: center;
 }
 
-.main-section-info-toggle button {
-  width: 50%;
+.main-section-info-toggle li {
+  flex: 1;
+}
+.main-section-info-toggle a {
   padding: 12px 0;
+  text-align: center;
 }
 
 .button-active {
