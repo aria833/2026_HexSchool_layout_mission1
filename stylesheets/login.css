@@ -513,14 +513,16 @@ body {
 
 .main-product-section-list-card,
 .recommend-card,
-.hover-selected {
+.hover-selected,
+.main-items-card {
   border-radius: 8px;
   position: relative;
   overflow: hidden;
 }
 .main-product-section-list-card::after,
 .recommend-card::after,
-.hover-selected::after {
+.hover-selected::after,
+.main-items-card::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -531,7 +533,8 @@ body {
 }
 .main-product-section-list-card:hover::after,
 .recommend-card:hover::after,
-.hover-selected:hover::after {
+.hover-selected:hover::after,
+.main-items-card:hover::after {
   opacity: 1;
 }
 

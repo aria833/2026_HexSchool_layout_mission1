@@ -18,7 +18,8 @@ body {
 //卡片hover時的遮罩
 .main-product-section-list-card,
 .recommend-card,
-.hover-selected {
+.hover-selected,
+.main-items-card {
     border-radius: 8px;
     position: relative;
     overflow: hidden; //超出卡片範圍的內容全部裁切掉

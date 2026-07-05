@@ -84,3 +84,10 @@ main {
     padding: 12px 24px;
 }
 
+.reserve:hover {
+    background-color: $neutral700;
+}
+
+.reserve:active {
+    background-color: $neutral800;
+}
