@@ -434,6 +434,10 @@ button {
     margin-bottom: 8px;
     }
 
+     .spacing-mb-s {
+    gap: 12px;
+    }
+
     .margin-bottom-mb-s {
     margin-bottom: 12px;
     }
@@ -482,6 +486,10 @@ button {
 
     .d-mb-flex {
         display: flex;
+    }
+
+    .jcsb-mb {
+        justify-content: space-between;
     }
 
     .flex-mb-nowrap {

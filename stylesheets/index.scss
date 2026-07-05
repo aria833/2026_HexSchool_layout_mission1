@@ -14,46 +14,6 @@
 }
 
 
-
-//header 區域
-.header-area {
-    padding: 16px 0;
-
-    &-member {
-        a {
-            padding: 12px;
-
-            i {
-                font-size: 24px;
-            }
-        }
-
-        a:hover {
-            color: $primary400;
-        }   
-    }
-}   
-
-.header-nav-link {
-    a {
-        padding: 12px 0;
-    }
-    a:hover {
-        color: $primary400;
-    }  
-}
-
-.header-mb-nav-link {
-    li {
-        width: 50%;
-        text-align: center;
-    }
-
-    a {
-        padding: 12px 0;
-    }
-}
-
 .bg-color-primary200 {
     background-color: $primary200;
 }
@@ -231,8 +191,8 @@ main {
     left: -80px;
 
     @media (max-width: 576px) {
-        top: 32px;
-        left: -24px;
+        top: -24px;
+        left: -36px;
     }
 }
 
@@ -242,8 +202,8 @@ main {
     right: -38px;
 
     @media (max-width: 576px) {
-        bottom: 40px;
-        right: -10px;
+        bottom: 24px;
+        right: -36px;
     }
 }
 
@@ -283,9 +243,23 @@ main {
     margin: 64px 0;
 }
 
+.series-card {
+    li {
+        min-width: 306px;
+        @media (max-width: 576px) {
+           min-width: 0;
+           min-width: calc((100% - 12px) / 2);
+        }
+    }
+}
+
 .series-card-content {
     padding: 118px 0;
-    min-width: 306px;
+    
+    @media (max-width: 576px) {
+        padding-top: 62.5px;
+        padding-bottom: 61px;
+    }
 }
 
 .series-card-item1 {
@@ -294,9 +268,8 @@ main {
         url(../img/product-list/product-6.png);
     background-size: cover;
     background-position: center;
-    max-width: 306px;
     color: $neutral0;
-
+    aspect-ratio: 1 / 1;
 }
 
 .series-card-item2 {
@@ -305,9 +278,8 @@ main {
         url(../img/index/product-11.png);
     background-size: cover;
     background-position: center;
-    max-width: 306px;
     color: $neutral0;
-
+    aspect-ratio: 1 / 1;
 }
 .series-card-item3 {
     background-image: 
@@ -315,9 +287,8 @@ main {
         url(../img/product-list/product-9.png);
     background-size: cover;
     background-position: center;
-    max-width: 306px;
     color: $neutral0;
-
+    aspect-ratio: 1 / 1;
 }
 .series-card-item4 {
     background-image: 
@@ -325,18 +296,8 @@ main {
         url(../img/index/product-10.png);
     background-size: cover;
     background-position: center;
-    max-width: 306px;
     color: $neutral0;
-
-}
-
-@media (max-width: 576px) {
-    .series-card-item1,
-    .series-card-item2,
-    .series-card-item3,
-    .series-card-item4 {
-        min-width: calc((100% - 8px) / 2);
-    }   
+    aspect-ratio: 1 / 1;
 }
 
 
@@ -364,56 +325,3 @@ main {
 
 
 
-//coupon區域
-.coupon {
-    background-color: $primary200;
-    
-    &-content {
-        padding: 24px 0;
-        margin-top: 48px;
-
-        @media (max-width: 576px) {
-            margin-top: 24px;
-        }
-
-        a {
-            color: $neutral0;
-            background-color: $neutral900;
-            padding: 12px 24px;
-
-            @media (max-width: 576px) {
-                padding: 8px 16px;
-            }
-        }
-    }
-}
-
-//footer區域
-footer {
-    background-color: $neutral100;
-    padding: 64px 0;
-
-    @media (max-width: 576px) {
-        padding: 32px 0;
-    }
-}
-
-.footer {
-    &-nav {
-        &-link {
-            a {
-                padding: 12px 0;
-            }
-
-            a:hover {
-                color: $primary400;
-            }
-        }
-    }
-    &-copyright {
-        color: $neutral600;
-        padding-top: 32px;
-        text-align: center;
-        border-top: 1px solid $neutral300;
-    }
-}

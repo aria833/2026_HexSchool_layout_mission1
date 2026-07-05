@@ -430,6 +430,9 @@ button {
   .margin-bottom-mb-xs {
     margin-bottom: 8px;
   }
+  .spacing-mb-s {
+    gap: 12px;
+  }
   .margin-bottom-mb-s {
     margin-bottom: 12px;
   }
@@ -468,6 +471,9 @@ button {
   .d-mb-flex {
     display: flex;
   }
+  .jcsb-mb {
+    justify-content: space-between;
+  }
   .flex-mb-nowrap {
     flex-wrap: nowrap;
   }
@@ -505,13 +511,6 @@ body {
   width: 100%;
 }
 
-/* 可以先將所有物件加上邊框，來判斷範圍
-    border會佔據距離，outline不會
-*/
-*, *:before, *:after {
-  outline: 1px solid red;
-}
-
 .header-area {
   padding: 16px 0;
 }
@@ -530,6 +529,67 @@ body {
 }
 .header-nav-link a:hover {
   color: #57A203;
+}
+
+.header-mb-nav-link li {
+  width: 50%;
+  text-align: center;
+}
+.header-mb-nav-link a {
+  padding: 12px 0;
+}
+
+.coupon {
+  background-color: #E8FEC5;
+}
+.coupon-content {
+  padding: 24px 0;
+  margin-top: 48px;
+}
+@media (max-width: 576px) {
+  .coupon-content {
+    margin-top: 24px;
+  }
+}
+.coupon-content a {
+  color: #FFFFFF;
+  background-color: #212529;
+  padding: 12px 24px;
+}
+@media (max-width: 576px) {
+  .coupon-content a {
+    padding: 8px 16px;
+  }
+}
+
+footer {
+  background-color: #F8F9FA;
+  padding: 64px 0;
+}
+@media (max-width: 576px) {
+  footer {
+    padding: 32px 0;
+  }
+}
+
+.footer-nav-link a {
+  padding: 12px 0;
+}
+.footer-nav-link a:hover {
+  color: #57A203;
+}
+.footer-copyright {
+  color: #6C757D;
+  padding-top: 32px;
+  text-align: center;
+  border-top: 1px solid #DEE2E6;
+}
+
+/* 可以先將所有物件加上邊框，來判斷範圍
+    border會佔據距離，outline不會
+*/
+*, *:before, *:after {
+  outline: 1px solid red;
 }
 
 .main-section-input {
@@ -584,17 +644,4 @@ body {
 }
 .main-section-method-card i {
   font-size: 40px;
-}
-
-.footer-nav-link a {
-  padding: 12px 0;
-}
-.footer-nav-link a:hover {
-  color: #57A203;
-}
-.footer-copyright {
-  color: #6C757D;
-  padding-top: 32px;
-  text-align: center;
-  border-top: 1px solid #DEE2E6;
 }/*# sourceMappingURL=login.css.map */

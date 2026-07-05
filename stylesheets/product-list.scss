@@ -13,34 +13,6 @@
 }
 */
 
-//header 區域
-.header-area {
-    padding-top: 16px;
-    padding-bottom: 16px;
-
-    &-member {
-        a {
-            padding: 12px;
-
-            i {
-                font-size: 24px;
-            }
-        }
-        a:hover {
-            color: $primary400;
-        }
-    }
-}
-
-
-.header-nav-link {
-    a {
-        padding-top: 12px 0;
-    }
-    a:hover {
-        color: $primary400;
-    }
-}
 
 //麵包屑區域
 .main-breadcrumb {
@@ -158,56 +130,4 @@
 }
 
 
-//coupon區域
-.coupon {
-    background-color: $primary200;
-    
-    &-content {
-        padding: 24px 0;
-        margin-top: 48px;
 
-        @media (max-width: 576px) {
-            margin-top: 24px;
-        }
-
-        a {
-            color: $neutral0;
-            background-color: $neutral900;
-            padding: 12px 24px;
-
-            @media (max-width: 576px) {
-                padding: 8px 16px;
-            }
-        }
-    }
-}
-
-//footer區域
-footer {
-    background-color: $neutral100;
-    padding: 64px 0;
-
-    @media (max-width: 576px) {
-        padding: 32px 0;
-    }
-}
-
-.footer {
-    &-nav {
-        &-link {
-            a {
-                padding: 12px 0;
-            }
-
-            a:hover {
-                color: $primary400;
-            }
-        }
-    }
-    &-copyright {
-        color: $neutral600;
-        padding-top: 32px;
-        text-align: center;
-        border-top: 1px solid $neutral300;
-    }
-}
