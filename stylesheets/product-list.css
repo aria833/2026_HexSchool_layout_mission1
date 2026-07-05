@@ -657,6 +657,24 @@ footer {
   background-color: #C0FA73;
 }
 
+.main-product-section-list-card {
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+.main-product-section-list-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.main-product-section-list-card:hover::after {
+  opacity: 1;
+}
+
 .number-selected {
   background-color: #C0FA73;
 }

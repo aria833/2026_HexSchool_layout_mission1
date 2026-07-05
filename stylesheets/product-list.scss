@@ -102,6 +102,28 @@
     }
 }
 
+
+
+.main-product-section-list-card {
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden; //超出卡片範圍的內容全部裁切掉
+    &::after {
+        content: ""; //所有偽元素都一定要有 content，所以即使不需要文字，也要寫
+        position: absolute;
+        inset: 0; //四個方向都貼齊父元素
+        background: rgba(0, 0, 0, 0.15);
+        opacity: 0;
+        transition: opacity .3s ease; //opacity 改變時，不要瞬間跳，而是花 0.3 秒完成
+        pointer-events: none;
+    }
+    &:hover::after {
+        opacity: 1;
+    }
+}
+
+
+
 .number-selected {
     background-color: $primary300;
 }
