@@ -34,9 +34,11 @@
 
 .header-nav-link {
     a {
-        padding-top: 12px;
-        padding-bottom: 12px;
+        padding: 12px 0;
     }
+    a:hover {
+            color: $primary400;
+        }
 }
 
 .headings-h5 {
@@ -46,9 +48,19 @@
 
 //品牌故事區域
 .brand {
-    background-image: url("../img/hero.png");
+    background-image: 
+        /* linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),*/
+        url("../img/hero.png");
     background-size: cover;
     background-position: center;
+
+    @media (width: 543px) {
+        background-image: 
+            linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url("../img/hero-sm.png");
+        background-size: cover;
+        background-position: center;
+    }
 }
 
 .brand-title {
@@ -64,6 +76,10 @@
     text-align: center;
     padding: 32px;
     background-color: $primary100;
+
+    @media (width: 543px) {
+        padding: 24px;
+    }
 }
 
 //多區域共用
@@ -71,9 +87,21 @@
     border-bottom: 1px solid $neutral300;
 }
 
-.margin-right8 {
-    margin-right: 8px;
+
+.history-event {
+    ol {
+        li {
+            span:first-child {
+                padding-right: 8px;
+                border-right: 1px solid $neutral900;
+            }
+            span:last-child {
+                padding-left: 8px;
+            }
+        }
+    }
 }
+
 
 //品牌歷程區域
 .history-event {
@@ -117,7 +145,7 @@
         padding: 24px 0;
         margin-top: 48px;
 
-        @media (width: 375px) {
+        @media (width: 543px) {
             margin-top: 24px;
         }
 
@@ -126,7 +154,7 @@
             background-color: $neutral900;
             padding: 12px 24px;
 
-            @media (width: 375px) {
+            @media (width: 543px) {
                 padding: 8px 16px;
             }
         }
@@ -138,7 +166,7 @@ footer {
     background-color: $neutral100;
     padding: 64px 0;
 
-    @media (width:375px) {
+    @media (width:543px) {
         padding: 32px 0;
     }
 }

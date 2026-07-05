@@ -373,6 +373,11 @@ button {
     line-height: 1.5;
     font-weight: 500;
   }
+  .headings-mb-h3 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    font-weight: 700;
+  }
   .headings-mb-h4 {
     font-size: 1.5rem;
     line-height: 1.2;
@@ -394,8 +399,20 @@ button {
   .spacing-mb-xs {
     gap: 8px;
   }
+  .margin-bottom-mb-xs {
+    margin-bottom: 8px;
+  }
+  .margin-bottom-mb-s {
+    margin-bottom: 12px;
+  }
   .spacing-mb-m {
     gap: 16px;
+  }
+  .margin-bottom-mb-m {
+    margin-bottom: 16px;
+  }
+  .margin-bottom-mb-xl {
+    margin-bottom: 32px;
   }
   .px-mb-12 {
     padding: 0px 12px;
@@ -416,6 +433,9 @@ button {
   }
   .align-mb-center {
     align-items: center;
+  }
+  .text-mb-start {
+    text-align: start;
   }
   .w-md-full {
     width: 100%;
@@ -463,8 +483,10 @@ body {
 }
 
 .header-nav-link a {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 12px 0;
+}
+.header-nav-link a:hover {
+  color: #57A203;
 }
 
 .headings-h5 {
@@ -475,6 +497,13 @@ body {
   background-image: url("../img/hero.png");
   background-size: cover;
   background-position: center;
+}
+@media (width: 543px) {
+  .brand {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/hero-sm.png");
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .brand-title {
@@ -488,13 +517,22 @@ body {
   padding: 32px;
   background-color: #F5FEE7;
 }
+@media (width: 543px) {
+  .slogan {
+    padding: 24px;
+  }
+}
 
 .bottom-line {
   border-bottom: 1px solid #DEE2E6;
 }
 
-.margin-right8 {
-  margin-right: 8px;
+.history-event ol li span:first-child {
+  padding-right: 8px;
+  border-right: 1px solid #212529;
+}
+.history-event ol li span:last-child {
+  padding-left: 8px;
 }
 
 .history-event ol {
@@ -525,7 +563,7 @@ body {
   padding: 24px 0;
   margin-top: 48px;
 }
-@media (width: 375px) {
+@media (width: 543px) {
   .coupon-content {
     margin-top: 24px;
   }
@@ -535,7 +573,7 @@ body {
   background-color: #212529;
   padding: 12px 24px;
 }
-@media (width: 375px) {
+@media (width: 543px) {
   .coupon-content a {
     padding: 8px 16px;
   }
@@ -545,7 +583,7 @@ footer {
   background-color: #F8F9FA;
   padding: 64px 0;
 }
-@media (width: 375px) {
+@media (width: 543px) {
   footer {
     padding: 32px 0;
   }

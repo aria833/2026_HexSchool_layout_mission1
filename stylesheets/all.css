@@ -362,7 +362,7 @@ button {
   margin: 0 auto;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 543px) {
   .label-mb-sm {
     font-size: 0.875rem;
     line-height: 1.5;
@@ -372,6 +372,11 @@ button {
     font-size: 1rem;
     line-height: 1.5;
     font-weight: 500;
+  }
+  .headings-mb-h3 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    font-weight: 700;
   }
   .headings-mb-h4 {
     font-size: 1.5rem;
@@ -394,8 +399,20 @@ button {
   .spacing-mb-xs {
     gap: 8px;
   }
+  .margin-bottom-mb-xs {
+    margin-bottom: 8px;
+  }
+  .margin-bottom-mb-s {
+    margin-bottom: 12px;
+  }
   .spacing-mb-m {
     gap: 16px;
+  }
+  .margin-bottom-mb-m {
+    margin-bottom: 16px;
+  }
+  .margin-bottom-mb-xl {
+    margin-bottom: 32px;
   }
   .px-mb-12 {
     padding: 0px 12px;
@@ -416,6 +433,9 @@ button {
   }
   .align-mb-center {
     align-items: center;
+  }
+  .text-mb-start {
+    text-align: start;
   }
   .w-md-full {
     width: 100%;

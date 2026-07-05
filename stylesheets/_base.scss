@@ -361,6 +361,12 @@ button {
         font-weight: $font-weight-medium;
     }
 
+    .headings-mb-h3 {
+        font-size: map-get($font-sizes, 'h3');
+        line-height: 1.2;
+        font-weight: $font-weight-bold;
+    }
+
     .headings-mb-h4 {
         font-size: map-get($font-sizes, 'h4');
         line-height: 1.2;
@@ -389,8 +395,24 @@ button {
     gap: 8px;
     }
 
+    .margin-bottom-mb-xs {
+    margin-bottom: 8px;
+    }
+
+    .margin-bottom-mb-s {
+    margin-bottom: 12px;
+    }
+
     .spacing-mb-m {
     gap: 16px;
+    }
+
+    .margin-bottom-mb-m {
+    margin-bottom: 16px;
+    }
+
+    .margin-bottom-mb-xl {
+    margin-bottom: 32px;
     }
 
     .px-mb-12 {
@@ -415,6 +437,10 @@ button {
 
     .align-mb-center {
         align-items: center;
+    }
+
+    .text-mb-start {
+        text-align: start;
     }
 
     .w-md-full {
