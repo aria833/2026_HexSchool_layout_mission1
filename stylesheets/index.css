@@ -610,6 +610,13 @@ body {
   }
 }
 
+.coupon-content a:hover {
+  background-color: #495057;
+}
+.coupon-content a:active {
+  background-color: #343A40;
+}
+
 footer {
   background-color: #F8F9FA;
   padding: 64px 0;
