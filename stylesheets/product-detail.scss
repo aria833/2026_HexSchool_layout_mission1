@@ -46,9 +46,11 @@ main {
 .main-detail {
     //麵包屑
     &-introduction-title-breadcrumb {
-        color: $neutral600;
-
-        a:last-child {
+        li {
+            color: $neutral600;
+        }
+        
+        li:last-child {
             color: $neutral900;
         }
     }

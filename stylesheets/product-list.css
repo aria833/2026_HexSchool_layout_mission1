@@ -648,12 +648,12 @@ footer {
 	outline: 1px solid red;
 }
 */
-.main-breadcrumb {
+.main-breadcrumb li {
   margin-top: 32px;
   margin-bottom: 24px;
   color: #6C757D;
 }
-.main-breadcrumb a:last-child {
+.main-breadcrumb li:last-child {
   color: #212529;
 }
 .main-breadcrumb span {

@@ -16,11 +16,13 @@
 
 //麵包屑區域
 .main-breadcrumb {
-    margin-top: 32px;
-    margin-bottom: 24px;
-    color: $neutral600;
+    li {
+        margin-top: 32px;
+        margin-bottom: 24px;
+        color: $neutral600;
+    }
 
-    a:last-child {
+    li:last-child {
         color: $neutral900;
     }
 
@@ -128,6 +130,3 @@
     line-height: 1;
     padding: 10px;
 }
-
-
-

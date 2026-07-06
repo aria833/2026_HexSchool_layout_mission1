@@ -671,10 +671,10 @@ main {
   }
 }
 
-.main-detail-introduction-title-breadcrumb {
+.main-detail-introduction-title-breadcrumb li {
   color: #6C757D;
 }
-.main-detail-introduction-title-breadcrumb a:last-child {
+.main-detail-introduction-title-breadcrumb li:last-child {
   color: #212529;
 }
 .main-detail-introduction-price h5 {
