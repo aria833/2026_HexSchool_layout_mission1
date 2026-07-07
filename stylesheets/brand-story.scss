@@ -1,9 +1,4 @@
-@import 'reset';
-
 @import 'variable';
-@import 'layout';
-@import 'base';
-@import 'main';
 
 /* 可以先將所有物件加上邊框，來判斷範圍
     border會佔據距離，outline不會
@@ -11,9 +6,6 @@
 	outline: 1px solid red;
 }
 */
-
-
-
 
 //品牌故事區域
 .brand {
