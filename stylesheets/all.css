@@ -54,38 +54,6 @@ table {
   border-spacing: 0;
 }
 
-/* 全域都套用border-box
-    包含了padding和border的區域
-*/
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-/* 清除圖片底部預設的空隙：img預設為inline元素，會依照文字基線（baseline）進行垂直對齊，因此會在底部保留約3~5px的空間，用來容納文字的descender 
-    處理方式1：display:block
-        將圖片改為區塊元素，直接避免 inline 元素的基線空隙問題
-    處理方式2：vertical-align: middle
-        保留 inline 特性，調整圖片與文字基線的對齊方式
-設定img為流動圖片，避免破版*/
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-button {
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-  border: none;
-}
-
 :root {
   --column: 12; /* 拆分成12格網格系統 */
   --gutter: 24px; /* gutter配置24px */
@@ -137,6 +105,38 @@ button {
   --span: 10;
   --gap-count: calc(var(--span) - 1);
   width: calc((100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count));
+}
+
+/* 全域都套用border-box
+    包含了padding和border的區域
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* 清除圖片底部預設的空隙：img預設為inline元素，會依照文字基線（baseline）進行垂直對齊，因此會在底部保留約3~5px的空間，用來容納文字的descender 
+    處理方式1：display:block
+        將圖片改為區塊元素，直接避免 inline 元素的基線空隙問題
+    處理方式2：vertical-align: middle
+        保留 inline 特性，調整圖片與文字基線的對齊方式
+設定img為流動圖片，避免破版*/
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
 }
 
 .display1 {
